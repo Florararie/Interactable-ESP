@@ -1,0 +1,9 @@
+﻿{
+	"name": "Interactable ESP",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/Florararie/Interactable-ESP",
+	"description": "Applies custom highlights / labels and bounding boxes to chosen items to act as an ESP",
+	"dependencies": [
+		"bbepis-BepInExPack-5.4.2108"
+	]
+}
