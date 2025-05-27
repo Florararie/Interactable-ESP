@@ -190,6 +190,7 @@ namespace InteractableESP
 
         private void UpdateLabelForInteractable(GameObject interactable, string token, bool needLabel, Color color)
         {
+            if (token == "MULTISHOP_TERMINAL_NAME") return;
             var marker = interactable.transform.Find("ESPMarker") ?? CreateMarker(interactable.transform);
             var label = marker.GetComponent<InteractableLabel>();
 
