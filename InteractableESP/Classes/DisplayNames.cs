@@ -28,7 +28,7 @@ namespace InteractableESP
             {"TURRET1_INTERACTABLE_NAME", "Gunner Turret"},
             {"DRONE_GUNNER_INTERACTABLE_NAME", "Drone - Gunner"},
             {"DRONE_HEALING_INTERACTABLE_NAME", "Drone - Healing"},
-            {"EMERGENCYDRONE_INTERACTABLE_NAME", "Drone - Equipment"},
+            {"EMERGENCYDRONE_INTERACTABLE_NAME", "Drone - Emergency"}, //fixed mislableling
             {"NEWT_STATUE_NAME", "Newt Statue"},
             {"SECRET_BUTTON", "Secret Button"},
             {"SHRINE_BLOOD_NAME", "Shrine of Blood"},
@@ -40,6 +40,44 @@ namespace InteractableESP
             {"SHRINE_RESTACK_NAME", "Shrine of Order"},
             {"SHRINE_HEALING_NAME", "Shrine of the Woods"},
             {"TELEPORTER_NAME", "Teleporter"},
+            //new labels
+            // Large Category Chests
+            {"CATEGORYCHEST2_HEALING_NAME", "Large Chest - Healing"},
+            {"CATEGORYCHEST2_DAMAGE_NAME", "Large Chest - Damage"},
+            {"CATEGORYCHEST2_UTILITY_NAME", "Large Chest - Utility"},
+            
+            // Drones
+            {"DRONE_MISSILE_INTERACTABLE_NAME", "Drone - Missile"},
+            {"EQUIPMENTDRONE_INTERACTABLE_NAME", "Drone - Equipment"},
+            {"FLAMEDRONE_INTERACTABLE_NAME", "Drone - Incinerator"},
+            {"DRONE_MEGA_INTERACTABLE_NAME", "TC-280"},
+
+            // Moon Pillars
+            {"MOON_BATTERY_MASS_NAME", "Pillar of Mass"},
+            {"MOON_BATTERY_DESIGN_NAME", "Pillar of Design"},
+            {"MOON_BATTERY_SOUL_NAME", "Pillar of Soul"},
+            {"MOON_BATTERY_BLOOD_NAME", "Pillar of Blood"},
+
+            // Bazaar
+            {"LUNAR_TERMIAL_NAME", "Lunar Bud"},
+            {"LUNAR_REROLL_NAME", "Slab"},
+            {"BAZAAR_SEER_NAME", "Lunar Seer"},
+
+            // DLC 1
+            {"VOID_CHEST_NAME", "Void Cradle"},
+            {"VOID_TRIPLE_NAME", "Void Potential"},
+            {"VOIDLOCKBOX_NAME", "Encrusted Lockbox"},
+            {"DEEPVOIDBATTERY_NAME", "Deep Void Signal"},
+            {"NULL_WARD_NAME", "Cell Vent"},
+
+            // DLC 2
+            {"SHRINE_HALCYONITE_NAME", "Halcyon Shrine"},
+            {"SHRINE_COLOSSUS_NAME", "Shrine of Shaping"},
+            {"GOLDTOTEM_NAME", "Halcyon Beacon"},
+
+            // Miscellaneous
+            {"FAN_NAME", "Fan"},
+
         };
     }
 }
