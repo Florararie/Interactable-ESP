@@ -12,7 +12,7 @@ namespace InteractableESP
     {
         public const string PluginAuthor = "Floramene";
         public const string PluginName = "InteractableESP";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.1.0";
         public const string PluginGUID = PluginAuthor + "." + PluginName;
     }
 
@@ -128,6 +128,8 @@ namespace InteractableESP
             HighlightInteractables<MultiShopController>(_ => "TRIPLE_SHOP");
             HighlightInteractables<PressurePlateController>(_ => "SECRET_BUTTON");
             HighlightInteractables<TeleporterInteraction>(_ => "TELEPORTER_NAME");
+            HighlightInteractables<GenericPickupController>(i => i.GetDisplayName());
+            HighlightInteractables<GeodeController>(i => i.GetDisplayName());
         }
 
         private void HighlightInteractables<T>(System.Func<T, string> tokenSelector) where T : Component
@@ -260,6 +262,9 @@ namespace InteractableESP
                 {"CATEGORYCHEST_HEALING_NAME", _colorConfigs["Chest"].Value},
                 {"CATEGORYCHEST_DAMAGE_NAME", _colorConfigs["Chest"].Value},
                 {"CATEGORYCHEST_UTILITY_NAME", _colorConfigs["Chest"].Value},
+                {"CATEGORYCHEST2_HEALING_NAME", _colorConfigs["Chest"].Value},
+                {"CATEGORYCHEST2_DAMAGE_NAME", _colorConfigs["Chest"].Value},
+                {"CATEGORYCHEST2_UTILITY_NAME", _colorConfigs["Chest"].Value},
                 {"MULTISHOP_TERMINAL_NAME", _colorConfigs["Shop"].Value},
                 {"TRIPLE_SHOP", _colorConfigs["Shop"].Value},
                 {"DUPLICATOR_NAME", _colorConfigs["Printer"].Value},
@@ -272,16 +277,19 @@ namespace InteractableESP
                 {"DRONE_GUNNER_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
                 {"DRONE_HEALING_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
                 {"EMERGENCYDRONE_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
+                {"DRONE_MISSILE_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
+                {"EQUIPMENTDRONE_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
+                {"FLAMEDRONE_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
+                {"DRONE_MEGA_INTERACTABLE_NAME", _colorConfigs["Drone"].Value},
                 {"NEWT_STATUE_NAME", _colorConfigs["Lunar"].Value},
                 {"SECRET_BUTTON", _colorConfigs["Lunar"].Value},
-                {"SHRINE_BLOOD_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_CHANCE_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_CLEANSE_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_COMBAT_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_GOLDSHORES_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_BOSS_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_RESTACK_NAME", _colorConfigs["Default"].Value},
-                {"SHRINE_HEALING_NAME", _colorConfigs["Default"].Value},
+                {"MOON_BATTERY_MASS_NAME", _colorConfigs["Lunar"].Value},
+                {"MOON_BATTERY_DESIGN_NAME", _colorConfigs["Lunar"].Value},
+                {"MOON_BATTERY_SOUL_NAME", _colorConfigs["Lunar"].Value},
+                {"MOON_BATTERY_BLOOD_NAME", _colorConfigs["Lunar"].Value},
+                {"LUNAR_TERMINAL_NAME", _colorConfigs["Lunar"].Value},
+                {"LUNAR_REROLL_NAME", _colorConfigs["Lunar"].Value},
+                {"BAZAAR_SEER_NAME", _colorConfigs["Lunar"].Value},
                 {"TELEPORTER_NAME", _colorConfigs["Teleporter"].Value}
             };
         }
@@ -294,6 +302,8 @@ namespace InteractableESP
             foreach (var i in GameObject.FindObjectsOfType<MultiShopController>()) yield return i.gameObject;
             foreach (var i in GameObject.FindObjectsOfType<PressurePlateController>()) yield return i.gameObject;
             foreach (var i in GameObject.FindObjectsOfType<TeleporterInteraction>()) yield return i.gameObject;
+            foreach (var i in GameObject.FindObjectsOfType<GenericPickupController>()) yield return i.gameObject;
+            foreach (var i in GameObject.FindObjectsOfType<GeodeController>()) yield return i.gameObject;
         }
 
         public void RemoveHighlightsAndLabelsForColorGroup(string colorGroup)

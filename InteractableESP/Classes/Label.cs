@@ -87,7 +87,10 @@ namespace InteractableESP
             if (purchase != null &&
                 !purchase.displayNameToken.Contains("DUPLICATOR") &&
                 !purchase.displayNameToken.Contains("SHRINE") &&
-                !purchase.displayNameToken.Contains("BAZAAR_CAULDRON"))
+                !purchase.displayNameToken.Contains("BAZAAR_CAULDRON") &&
+                !purchase.displayNameToken.Contains("MOON_BATTERY") &&
+                !purchase.displayNameToken.Contains("EQUIPMENTDRONE") &&
+                !purchase.displayNameToken.Contains("NULL_WARD"))
                 info += $" <color=#FFFFFF>- ${purchase.cost}</color>";
 
             // 3D Printer
